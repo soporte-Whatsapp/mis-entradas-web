@@ -8,6 +8,9 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -52,5 +55,15 @@
 </div>
 
 <script src="app.js"></script>
+
+<!-- Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+</script>
+
 </body>
 </html>
+
+
