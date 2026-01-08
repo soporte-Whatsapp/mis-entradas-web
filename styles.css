@@ -123,11 +123,6 @@ body {
   object-fit: cover;
 }
 
-.info .meta {
-  color: ##9fb3b3;
-  font-size: 13px;
-}
-
 .info h3 {
   font-size: 16px;
   margin: 4px 0;
@@ -150,6 +145,18 @@ body {
 .transfer {
   display: none;
 }
+
+.tickets-count {
+  color: #2dd4bf; /* verde turquesa */
+  font-weight: 600; /* opcional para destacar */
+}
+
+.date-time {
+  color: #9fb3b3; /* gris que ya tenías */
+  font-size: 13px;
+}
+
+
 
 
 
