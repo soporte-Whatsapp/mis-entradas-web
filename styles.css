@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f1b1b, #0b1414);
+  color: #fff;
+  padding: 16px;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.icon:active {
+  transform: scale(0.92);
+}
+
+.material-icons-outlined {
+  font-size: 22px;
+  color: #cfd3d6;
+}
+
+/* TABS */
+.tabs {
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 6px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tab.active {
+  background: #fff;
+  color: #000;
+}
+
+/* EMPTY STATE */
+.empty {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.empty h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.empty p {
+  color: #9fb3b3;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.refresh {
+  background: none;
+  border: none;
+  color: #2dd4bf;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* MONTH */
+.month {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* TICKET CARD */
+.ticket {
+  display: flex;
+  gap: 12px;
+  background: rgba(255,255,255,0.06);
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.ticket img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info .meta {
+  color: #2dd4bf;
+  font-size: 13px;
+}
+
+.info h3 {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.info p {
+  font-size: 14px;
+  color: #9fb3b3;
+}
+
+.transfer {
+  margin-top: 8px;
+  background: #2dd4bf;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}

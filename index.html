@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Entradas</title>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Mis Entradas</h1>
+
+  <div class="icons">
+    <div class="icon-box">
+      <span class="material-icons-outlined">notifications</span>
+    </div>
+
+    <div class="icon-box">
+      <span class="material-icons-outlined">person</span>
+    </div>
+  </div>
+</header>
+
+<section class="tabs">
+  <button class="tab active">Próximos</button>
+</section>
+
+<section class="empty" id="emptyState">
+  <h2>Todavía no tienes entradas en tu cuenta.</h2>
+  <p>Cuando adquieras tus entradas, selecciona Quentro como método de entrega.</p>
+  <button class="refresh" id="refreshBtn">Actualizar</button>
+</section>
+
+<section class="month" id="month" style="display:none;">
+  Enero 2026
+</section>
+
+<div class="ticket" id="ticket" style="display:none;">
+  <img src="https://cdn.getcrowder.com/images/123c68a5-a859-4e3a-8a74-297d1ecaac63-tmcono-evento.png" alt="Bad Bunny">
+  <div class="info">
+    <span class="meta">2 entradas · sábado 17 · 21:00hs</span>
+    <h3>Bad Bunny - DeBí Tirar Más Fotos</h3>
+    <p>Estadio Nacional - Lima - Perú</p>
+
+    <button class="transfer" id="transferBtn">Transferir</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
