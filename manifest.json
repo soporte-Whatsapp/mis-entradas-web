@@ -9,8 +9,9 @@
     {
       "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "https://play-lh.googleusercontent.com/BvbOyCDiUvTJVpFTaNtvqS2BII7YKNf1Wd5xPXknKxBP10follyeo8sI6IwBuYElPw=w240-h480-rw",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
 }
+
