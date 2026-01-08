@@ -7,11 +7,12 @@
   "theme_color": "#0f1b1b",
   "icons": [
     {
-      "src": "/icon-512.png",
+      "src": "/quentro.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ]
 }
+
 
