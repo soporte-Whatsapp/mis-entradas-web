@@ -124,7 +124,7 @@ body {
 }
 
 .info .meta {
-  color: #2dd4bf;
+  color: ##9fb3b3;
   font-size: 13px;
 }
 
@@ -150,5 +150,6 @@ body {
 .transfer {
   display: none;
 }
+
 
 
