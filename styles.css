@@ -147,14 +147,15 @@ body {
 }
 
 .tickets-count {
-  color: #2dd4bf; /* verde turquesa */
-  font-weight: 600; /* opcional para resaltar */
+  color: #2dd4bf !important; /* verde turquesa */
+  font-weight: 600;
 }
 
 .date-time {
-  color: #9fb3b3; /* gris como antes */
+  color: #9fb3b3 !important; /* gris original */
   font-size: 13px;
 }
+
 
 
 
