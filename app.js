@@ -71,5 +71,35 @@ function confirmTransfer() {
   document.getElementById('methodsScreen').style.display = 'none';
   document.getElementById('successScreen').style.display = 'block';
 }
+let selectedEntry = null;
+
+function openSelect() {
+  document.getElementById('selectScreen').style.display = 'block';
+}
+
+function closeSelect() {
+  document.getElementById('selectScreen').style.display = 'none';
+}
+
+function toggleEntry(el) {
+  document.querySelectorAll('.entry').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedEntry = el;
+}
+
+function openMethods() {
+  if (!selectedEntry) return;
+  document.getElementById('selectScreen').style.display = 'none';
+
+  // MARCAR COMO TRANSFERIDA
+  selectedEntry.classList.remove('selected');
+  selectedEntry.classList.add('transferred');
+
+  // cerrar flujo
+  setTimeout(() => {
+    closeSelect();
+  }, 200);
+}
+
 
 
