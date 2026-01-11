@@ -67,8 +67,39 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
+<!-- SELECCIONAR ENTRADAS -->
+<section class="select-screen" id="selectScreen" style="display:none;">
+  <header class="header">
+    <span class="back" onclick="closeSelect()">←</span>
+    <h1>Seleccionar entradas</h1>
+  </header>
+
+  <div class="entry-list">
+    <div class="entry selected" onclick="toggleEntry(this)">
+      <img src="https://cdn.getcrowder.com/images/123c68a5-a859-4e3a-8a74-297d1ecaac63-tmcono-evento.png">
+      <div class="entry-info">
+        <h3>TRIBUNA NORTE</h3>
+        <p>SECCIÓN · FILA · ASIENTO</p>
+      </div>
+      <div class="check">✓</div>
+    </div>
+
+    <div class="entry" onclick="toggleEntry(this)">
+      <img src="https://cdn.getcrowder.com/images/123c68a5-a859-4e3a-8a74-297d1ecaac63-tmcono-evento.png">
+      <div class="entry-info">
+        <h3>TRIBUNA NORTE</h3>
+        <p>SECCIÓN · FILA · ASIENTO</p>
+      </div>
+      <div class="check">✓</div>
+    </div>
+  </div>
+
+  <button class="bottom-btn" onclick="openMethods()">Transferir entrada</button>
+</section>
+
 </body>
 </html>
+
 
 
 
