@@ -96,8 +96,36 @@ if ('serviceWorker' in navigator) {
   <button class="bottom-btn" onclick="openMethods()">Transferir entrada</button>
 </section>
 
+<!-- METODOS DE TRANSFERENCIA -->
+<section class="select-screen" id="methodsScreen" style="display:none;">
+  <header class="header">
+    <span class="back" onclick="document.getElementById('methodsScreen').style.display='none'">←</span>
+    <h1>Transferir entrada</h1>
+  </header>
+
+  <div class="entry-list">
+    <div class="entry selected">
+      <div class="entry-info">
+        <h3>Quentro ID</h3>
+        <p>Transferir a otro usuario</p>
+      </div>
+      <div class="check">✓</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-info">
+        <h3>Correo electrónico</h3>
+        <p>Enviar por email</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="bottom-btn" onclick="confirmTransfer()">Confirmar transferencia</button>
+</section>
+
 </body>
 </html>
+
 
 
 
