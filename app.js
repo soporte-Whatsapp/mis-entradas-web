@@ -49,3 +49,27 @@ transferBtn.addEventListener('click', () => {
     ocultarEntrada();
   }
 });
+
+function openSelect() {
+  document.getElementById('selectScreen').style.display = 'block';
+}
+
+function closeSelect() {
+  document.getElementById('selectScreen').style.display = 'none';
+}
+
+function toggleEntry(el) {
+  el.classList.toggle('selected');
+}
+
+function openMethods() {
+  document.getElementById('selectScreen').style.display = 'none';
+  document.getElementById('methodsScreen').style.display = 'block';
+}
+
+function confirmTransfer() {
+  document.getElementById('methodsScreen').style.display = 'none';
+  document.getElementById('successScreen').style.display = 'block';
+}
+
+
