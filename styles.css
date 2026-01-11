@@ -155,6 +155,91 @@ body {
   color: #9fb3b3 !important; /* gris original */
   font-size: 13px;
 }
+.select-screen {
+  position: fixed;
+  inset: 0;
+  background: #0b1414;
+  z-index: 20;
+  padding: 16px;
+}
+
+.back {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.entry-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a2323;
+  padding: 12px;
+  border-radius: 14px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.entry.selected {
+  background: #ffffff;
+  color: #000;
+  opacity: 1;
+}
+
+.entry img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.entry-info h3 {
+  font-size: 15px;
+}
+
+.entry-info p {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.check {
+  position: absolute;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: #2dd4bf;
+  color: #000;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.entry.selected .check {
+  display: flex;
+}
+
+.bottom-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 16px;
+  right: 16px;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 
 
 
