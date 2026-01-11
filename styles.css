@@ -239,6 +239,35 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
+/* ENTRADA TRANSFERIDA */
+.entry.transferred {
+  background: #ffffff;
+  color: #000;
+  opacity: 1;
+}
+
+.entry.transferred .check {
+  display: flex;
+}
+
+.entry.transferred .entry-info p {
+  color: #000;
+  opacity: 0.6;
+}
+
+/* CHECK VERDE EXACTO COMO APP */
+.check {
+  position: absolute;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  background: #2dd4bf;
+  color: #000;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+
 
 
 
