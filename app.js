@@ -4,7 +4,9 @@ const emptyState = document.getElementById('emptyState');
 const ticket = document.getElementById('ticket');
 const month = document.getElementById('month');
 
-// 🔹 FUNCIONES
+// ==================
+// MOSTRAR / OCULTAR ENTRADA
+// ==================
 function mostrarEntrada() {
   emptyState.style.display = 'none';
   ticket.style.display = 'flex';
@@ -19,7 +21,9 @@ function ocultarEntrada() {
   localStorage.setItem('tieneEntrada', 'false');
 }
 
-// 🔹 AL CARGAR LA PÁGINA
+// ==================
+// AL CARGAR
+// ==================
 window.onload = () => {
   const tieneEntrada = localStorage.getItem('tieneEntrada');
 
@@ -30,7 +34,9 @@ window.onload = () => {
   }
 };
 
-// 🔹 ACTUALIZAR
+// ==================
+// ACTUALIZAR
+// ==================
 refreshBtn.addEventListener('click', () => {
   refreshBtn.innerText = 'Actualizando...';
 
@@ -40,37 +46,9 @@ refreshBtn.addEventListener('click', () => {
   }, 1200);
 });
 
-// 🔹 TRANSFERIR
-transferBtn.addEventListener('click', () => {
-  const correo = prompt('Correo del destinatario');
-
-  if (correo) {
-    alert('Entrada transferida a ' + correo);
-    ocultarEntrada();
-  }
-});
-
-function openSelect() {
-  document.getElementById('selectScreen').style.display = 'block';
-}
-
-function closeSelect() {
-  document.getElementById('selectScreen').style.display = 'none';
-}
-
-function toggleEntry(el) {
-  el.classList.toggle('selected');
-}
-
-function openMethods() {
-  document.getElementById('selectScreen').style.display = 'none';
-  document.getElementById('methodsScreen').style.display = 'block';
-}
-
-function confirmTransfer() {
-  document.getElementById('methodsScreen').style.display = 'none';
-  document.getElementById('successScreen').style.display = 'block';
-}
+// ==================
+// FLUJO TRANSFERENCIA
+// ==================
 let selectedEntry = null;
 
 function openSelect() {
@@ -82,20 +60,27 @@ function closeSelect() {
 }
 
 function toggleEntry(el) {
-  document.querySelectorAll('.entry').forEach(e => e.classList.remove('selected'));
+  document.querySelectorAll('.entry').forEach(e =>
+    e.classList.remove('selected')
+  );
   el.classList.add('selected');
   selectedEntry = el;
 }
 
 function openMethods() {
   if (!selectedEntry) return;
+
   document.getElementById('selectScreen').style.display = 'none';
+  document.getElementById('methodsScreen').style.display = 'block';
+}
 
-  // MARCAR COMO TRANSFERIDA
-  selectedEntry.classList.remove('selected');
-  selectedEntry.classList.add('transferred');
+function confirmTransfer() {
+  document.getElementById('methodsScreen').style.display = 'none';
 
-  // cerrar flujo
+  // 🔥 MARCAR LA ENTRADA PRINCIPAL COMO TRANSFERIDA
+  ticket.classList.add('transferred');
+
+  // cerrar todo
   setTimeout(() => {
     closeSelect();
   }, 200);
