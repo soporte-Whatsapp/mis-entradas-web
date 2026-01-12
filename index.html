@@ -17,15 +17,9 @@
 
 <header class="header">
   <h1>Mis Entradas</h1>
-
   <div class="icons">
-    <div class="icon-box">
-      <span class="material-icons-outlined">notifications</span>
-    </div>
-
-    <div class="icon-box">
-      <span class="material-icons-outlined">person</span>
-    </div>
+    <div class="icon-box"><span class="material-icons-outlined">notifications</span></div>
+    <div class="icon-box"><span class="material-icons-outlined">person</span></div>
   </div>
 </header>
 
@@ -39,39 +33,28 @@
   <button class="refresh" id="refreshBtn">Actualizar</button>
 </section>
 
-<section class="month" id="month" style="display:none;">
-  Enero 2026
-</section>
+<section class="month" id="month" style="display:none;">Enero 2026</section>
 
-<!-- TARJETA DE ENTRADA -->
+<!-- TARJETA -->
 <div class="ticket" id="ticket" style="display:none;" onclick="openSelect()">
-  <img src="https://cdn.getcrowder.com/images/123c68a5-a859-4e3a-8a74-297d1ecaac63-tmcono-evento.png" alt="Bad Bunny">
+  <img src="https://cdn.getcrowder.com/images/123c68a5-a859-4e3a-8a74-297d1ecaac63-tmcono-evento.png">
 
   <div class="info">
     <span class="tickets-count">2 entradas</span>
     <span class="date-time"> · sábado 17 · 21:00hs</span>
-
     <h3>Bad Bunny - DeBí Tirar MáS...</h3>
-    <p>Estadio Nacional - Lima - Perú</p>
-
-    <button class="transfer" id="transferBtn">Transferir</button>
+    <p class="location">Estadio Nacional - Lima - Perú</p>
+    <button class="transfer">Transferir</button>
   </div>
 
-  <!-- CHECK VERDE DENTRO DE LA ENTRADA -->
-  <div class="ticket-check" id="ticketCheck">✓</div>
+  <!-- CHECK CENTRADO -->
+  <div class="ticket-check">✓</div>
 </div>
 
 <script src="app.js"></script>
 
-<!-- Service Worker -->
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
-}
-</script>
-
 <!-- SELECCIONAR ENTRADAS -->
-<section class="select-screen" id="selectScreen" style="display:none;">
+<section class="select-screen" id="selectScreen">
   <header class="header">
     <span class="back" onclick="closeSelect()">←</span>
     <h1>Seleccionar entradas</h1>
@@ -100,26 +83,29 @@ if ('serviceWorker' in navigator) {
   <button class="bottom-btn" onclick="openMethods()">Transferir entrada</button>
 </section>
 
-<!-- METODOS DE TRANSFERENCIA -->
-<section class="select-screen" id="methodsScreen" style="display:none;">
+<!-- METODOS + CONTACTOS -->
+<section class="select-screen" id="methodsScreen">
   <header class="header">
-    <span class="back" onclick="document.getElementById('methodsScreen').style.display='none'">←</span>
+    <span class="back" onclick="closeMethods()">←</span>
     <h1>Transferir entrada</h1>
   </header>
 
+  <h4 class="section-title">Contactos frecuentes</h4>
+
   <div class="entry-list">
-    <div class="entry selected">
+    <div class="entry" onclick="selectContact(this)">
+      <div class="avatar">A</div>
       <div class="entry-info">
-        <h3>Quentro ID</h3>
-        <p>Transferir a otro usuario</p>
+        <h3>Andrés López</h3>
+        <p>andres@gmail.com</p>
       </div>
-      <div class="check">✓</div>
     </div>
 
-    <div class="entry">
+    <div class="entry" onclick="selectContact(this)">
+      <div class="avatar">M</div>
       <div class="entry-info">
-        <h3>Correo electrónico</h3>
-        <p>Enviar por email</p>
+        <h3>María Torres</h3>
+        <p>maria@hotmail.com</p>
       </div>
     </div>
   </div>
