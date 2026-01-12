@@ -1,278 +1,37 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
-}
-
-body {
-  min-height: 100vh;
-  background: linear-gradient(180deg, #0f1b1b, #0b1414);
-  color: #fff;
-  padding: 16px;
-}
-
-/* HEADER */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  font-size: 26px;
-  font-weight: 600;
-}
-
-.icons {
-  display: flex;
-  gap: 10px;
-}
-
-.icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(6px);
-  cursor: pointer;
-  transition: transform 0.15s ease;
-}
-
-.icon:active {
-  transform: scale(0.92);
-}
-
-.material-icons-outlined {
-  font-size: 22px;
-  color: #cfd3d6;
-}
-
-/* TABS */
-.tabs {
-  background: rgba(255,255,255,0.05);
-  border-radius: 14px;
-  padding: 6px;
-  margin-bottom: 30px;
-}
-
-.tab {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.tab.active {
-  background: #fff;
-  color: #000;
-}
-
-/* EMPTY STATE */
-.empty {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.empty h2 {
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-.empty p {
-  color: #9fb3b3;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.refresh {
-  background: none;
-  border: none;
-  color: #2dd4bf;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* MONTH */
-.month {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* TICKET CARD */
+/* CHECK VERDE TARJETA PRINCIPAL */
 .ticket {
-  display: flex;
-  gap: 12px;
-  background: rgba(255,255,255,0.06);
-  padding: 12px;
-  border-radius: 16px;
-}
-
-.ticket img {
-  width: 90px;
-  height: 90px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.info h3 {
-  font-size: 16px;
-  margin: 4px 0;
-}
-
-.info p {
-  font-size: 14px;
-  color: #9fb3b3;
-}
-
-.transfer {
-  margin-top: 8px;
-  background: #2dd4bf;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-}
-.transfer {
-  display: none;
-}
-
-.tickets-count {
-  color: #2dd4bf !important; /* verde turquesa */
-  font-weight: 600;
-}
-
-.date-time {
-  color: #9fb3b3 !important; /* gris original */
-  font-size: 13px;
-}
-.select-screen {
-  position: fixed;
-  inset: 0;
-  background: #0b1414;
-  z-index: 20;
-  padding: 16px;
-}
-
-.back {
-  font-size: 22px;
-  cursor: pointer;
-}
-
-.entry-list {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.entry {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #1a2323;
-  padding: 12px;
-  border-radius: 14px;
   position: relative;
-  cursor: pointer;
-  opacity: 0.5;
 }
 
-.entry.selected {
-  background: #ffffff;
-  color: #000;
-  opacity: 1;
-}
-
-.entry img {
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
-}
-
-.entry-info h3 {
-  font-size: 15px;
-}
-
-.entry-info p {
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-.check {
+.ticket-check {
   position: absolute;
-  right: 12px;
-  width: 28px;
-  height: 28px;
-  background: #2dd4bf;
-  color: #000;
-  border-radius: 50%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.entry.selected .check {
-  display: flex;
-}
-
-.bottom-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 16px;
-  right: 16px;
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 16px;
-  border-radius: 14px;
-  font-size: 16px;
-  font-weight: 600;
-}
-/* ENTRADA TRANSFERIDA */
-.entry.transferred {
-  background: #ffffff;
-  color: #000;
-  opacity: 1;
-}
-
-.entry.transferred .check {
-  display: flex;
-}
-
-.entry.transferred .entry-info p {
-  color: #000;
-  opacity: 0.6;
-}
-
-/* CHECK VERDE EXACTO COMO APP */
-.check {
-  position: absolute;
-  right: 12px;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 26px;
   height: 26px;
   background: #2dd4bf;
   color: #000;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
+  font-weight: bold;
 }
 
-
-
-
-
-
-
+/* CONTACTOS FRECUENTES */
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #2dd4bf;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
 
 
 
